@@ -30,7 +30,7 @@
                     <li class="nav-item"><a href="#speakers" class="nav-link">Los speakers</a></li>
                     <li class="nav-item"><a href="#place-date" class="nav-link">El lugar y la fecha</a></li>
                     <li class="nav-item"><a href="#formulario" class="nav-link">Conviértete en speaker</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-conference">Comprar tickets</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-conference" data-bs-toggle="modal" data-bs-target="#modal-compra">Comprar tickets</a></li>
                 </ul>
             </div>
         </div>
@@ -62,8 +62,8 @@
                                 nuestra comunidad el conocimiento y experiencia de los expertos que están creando el
                                 futuro de internet. Ven a conocer a los speakers de primer nivel que tenemos para ti. Te
                                 esperamos</p>
-                            <a href="#" class="btn btn-lg btn-outline-light">Quiero ser un speaker</a>
-                            <button class="btn btn-lg btn-conference">Comprar tickets</button>
+                            <a href="#formulario" class="btn btn-lg btn-outline-light">Quiero ser un speaker</a>
+                            <button class="btn btn-lg btn-conference" data-bs-toggle="modal" data-bs-target="#modal-compra">Comprar tickets</button>
                         </div>
                     </div>
                 </div>
@@ -141,7 +141,6 @@
         </div>
     </section>
     <!-- /speakers -->
-
 
     <!-- place and date -->
     <section id="place-date" class="my-4 py-4">
@@ -227,6 +226,38 @@
         </div>
     </footer>
     <!-- /footer -->
+
+    <!-- modal -->
+    <div class="modal fade" id="modal-compra" tabindex="-1" aria-labelledby="modal-compra-Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modal-compra-Label">Comprar tickets</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="form-label col">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert alert-warning" role="alert">
+                        Recibirás un correo de confirmación
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-conference">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal -->
 
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
